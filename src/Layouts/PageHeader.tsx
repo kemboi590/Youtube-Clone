@@ -7,6 +7,7 @@ function PageHeader() {
   const [showFullWidthSearch, setshowFullWidthSearch] = useState(false);
   return (
     <div className="flex gap-10 lg:gap-20 justify-between pt-2 mb-6 mx-4">
+      {/* first div */}
       <div
         className={` gap-4 items-center flex-shrink-0 ${
           showFullWidthSearch ? "hidden" : "flex"
@@ -21,8 +22,9 @@ function PageHeader() {
         </a>
       </div>
 
+      {/* second div */}
       <form
-        className={` gap-4 flex-grow justify-center ${
+        className={`gap-4 flex-grow justify-center ${
           showFullWidthSearch ? "flex" : "hidden md:flex"
         }`}
       >
@@ -48,10 +50,13 @@ function PageHeader() {
             <Search />
           </Button>
         </div>
+        
         <Button type="button" size="icon" className="flex-shrink-0">
           <Mic />
         </Button>
       </form>
+
+      {/* third div */}
       <div
         className={`flex-shrink-0 md:gap-2 ${
           showFullWidthSearch ? "hidden" : "flex"

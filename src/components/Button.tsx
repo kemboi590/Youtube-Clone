@@ -5,6 +5,7 @@ import { twMerge } from "tailwind-merge";
 const buttonStyles = cva(["transition-colors"], {
   variants: {
     variant: {
+      // a way to define different styles/versions for the button
       // styles of the buttons
       default: ["bg-secondary", "hover: bg-secondary-hover"],
       ghost: ["hover: bg-gray-100"],
@@ -28,14 +29,18 @@ const buttonStyles = cva(["transition-colors"], {
   },
 });
 
-type ButtonProps = VariantProps<typeof buttonStyles> & ComponentProps<"button">;
+type ButtonProps = VariantProps<typeof buttonStyles> & ComponentProps<"button">; // combining 2 types to create a new type in TS
 export default function Button({
   variant,
   size,
-  className,
+  className, //will be used to add additional classes to the button
   ...props
 }: ButtonProps) {
+  //destructuring the props from the ButtonProps type
   return (
-    <button {...props} className={twMerge( buttonStyles({ variant, size }), className)} />
+    <button
+      {...props}
+      className={twMerge(buttonStyles({ variant, size }), className)} //twMerge is a function that merges the classes, an example in this line of code is the buttonStyles({ variant, size }) which is an object that contains the classes for the button
+    />
   );
 }

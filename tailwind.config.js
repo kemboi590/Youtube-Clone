@@ -5,8 +5,8 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: {
-        secondary: {
+      colors: { //curated colors
+        secondary: { 
           DEFAULT: colors.neutral[200],
           hover: colors.neutral[300],
           border: colors.neutral[400],

@@ -1,0 +1,4 @@
+body {
+  /* no scrolling on x axis */
+  overflow-x: hidden;
+}
