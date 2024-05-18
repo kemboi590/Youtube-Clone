@@ -6,14 +6,14 @@ import { useState } from "react";
 function PageHeader() {
   const [showFullWidthSearch, setshowFullWidthSearch] = useState(false);
   return (
-    <div className="flex gap-10 lg:gap-20 justify-between pt-2 mb-6 mx-4">
+    <div className="flex gap-10 lg:gap-20 justify-between pt-2 mb-6 mx-1 sm:mx-4">
       {/* first div */}
       <div
         className={` gap-4 items-center flex-shrink-0 ${
           showFullWidthSearch ? "hidden" : "flex"
         }`}
       >
-        <Button variant="ghost" size="icon">
+        <Button variant="ghost" size="icon" className="hidden sm:block">
           <Menu />
         </Button>
 
@@ -24,7 +24,7 @@ function PageHeader() {
 
       {/* second div */}
       <form
-        className={`gap-4 flex-grow justify-center ${
+        className={`gap-1 sm:gap-4 flex-grow justify-center ${
           showFullWidthSearch ? "flex" : "hidden md:flex"
         }`}
       >
@@ -44,13 +44,13 @@ function PageHeader() {
           <input
             type="search"
             placeholder="Search"
-            className="rounded-l-full border border-secondary-border shadow-inner shadow-secondary py-1 px-4 text-lg w-full outline-none"
+            className="rounded-l-full border border-secondary-border shadow-inner shadow-secondary py-1 px-4 text-lg sm:w-full outline-none"
           />
           <Button className="py-2 px-4 rounded-r-full border-secondary-border border border-l-0 flex-shrink-0">
             <Search />
           </Button>
         </div>
-        
+
         <Button type="button" size="icon" className="flex-shrink-0">
           <Mic />
         </Button>
