@@ -6,7 +6,7 @@ import { useState } from "react";
 function PageHeader() {
   const [showFullWidthSearch, setshowFullWidthSearch] = useState(false);
   return (
-    <div className="flex gap-10 lg:gap-20 justify-between pt-2 mb-6 mx-1 sm:mx-4">
+    <div className="flex gap-10 lg:gap-20 justify-between pt-2 mb-6 mx-1 md:mx-4">
       {/* first div */}
       <div
         className={` gap-4 items-center flex-shrink-0 ${
@@ -24,7 +24,7 @@ function PageHeader() {
 
       {/* second div */}
       <form
-        className={`gap-1 sm:gap-4 flex-grow justify-center ${
+        className={`gap-1 md:gap-4 flex-grow justify-center ${
           showFullWidthSearch ? "flex" : "hidden md:flex"
         }`}
       >
@@ -44,7 +44,7 @@ function PageHeader() {
           <input
             type="search"
             placeholder="Search"
-            className="rounded-l-full border border-secondary-border shadow-inner shadow-secondary py-1 px-4 text-lg sm:w-full outline-none"
+            className="rounded-l-full border border-secondary-border shadow-inner shadow-secondary py-1 px-4 text-lg md:w-full outline-none"
           />
           <Button className="py-2 px-4 rounded-r-full border-secondary-border border border-l-0 flex-shrink-0">
             <Search />
@@ -75,11 +75,11 @@ function PageHeader() {
           <Mic />
         </Button>
 
-        <Button size="icon" variant="ghost">
+        <Button size="icon" variant="ghost" className="hidden md:block">
           <Upload />
         </Button>
 
-        <Button size="icon" variant="ghost">
+        <Button size="icon" variant="ghost" className="hidden md:block">
           <Bell />
         </Button>
 
