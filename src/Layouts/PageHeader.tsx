@@ -44,7 +44,7 @@ function PageHeader() {
           <input
             type="search"
             placeholder="Search"
-            className="rounded-l-full border border-secondary-border shadow-inner shadow-secondary py-1 px-4 text-lg w-1/2 md:w-full outline-none"
+            className="rounded-l-full border border-secondary-border shadow-inner shadow-secondary py-1 px-4 text-lg sm:w-full outline-none"
           />
           <Button className="py-2 px-4 rounded-r-full border-secondary-border border border-l-0 flex-shrink-0">
             <Search />
